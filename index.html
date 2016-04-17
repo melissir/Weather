@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Easy Peasy Weather App</title>
+    <link href="css/main.css" rel="stylesheet" />
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+<body ng-app="weatherApp">
+    <div class="main" ng-controller="MainController">
+        <h1>Easy Peasy Weather App</h1>
+        <p>{{ message }}</p>
+        <p>Weather in {{ city }}: <strong>{{ weather }}</strong></p>
+        <p><img src="{{ iconAdd }}"</p>
+        <p>Temperature: <strong>{{ temp | number:2 }} <a href = "#" ng-click="changeUnits()">{{ unitView }}</a></strong></p>
+    </div>
+
+
+
+    <!-- Modules -->
+    <script src="js/app.js"></script>
+
+    <!-- Controllers -->
+    <script src="js/MainController.js"></script>
+
+</body>
+</html>
